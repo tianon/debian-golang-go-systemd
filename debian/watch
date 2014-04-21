@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/golang-go-systemd-dev-$1\.tar\.gz/ \
+  https://github.com/coreos/go-systemd/tags .*/v?(\d\S*)\.tar\.gz

@@ -1,0 +1,19 @@
+Source: golang-go-systemd-dev
+Section: devel
+Priority: extra
+Maintainer: Tianon Gravi <admwiggin@gmail.com>
+Build-Depends: dbus-x11, debhelper (>= 9), dh-golang, golang-dbus-dev, golang-go
+Standards-Version: 3.9.5
+Homepage: https://github.com/coreos/go-systemd
+Vcs-Git: git://github.com/tianon/debian-golang-go-systemd-dev.git
+Vcs-Browser: https://github.com/tianon/debian-golang-go-systemd-dev
+
+Package: golang-go-systemd-dev
+Architecture: all
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Built-Using: ${misc:Built-Using}
+Description: Go client bindings for systemd socket activation, journal and dbus
+ Package "go-systemd" is a library that implements native Go client bindings
+ for systemd in packages "activation", "journal", and "dbus".
+ .
+ This package contains the source.

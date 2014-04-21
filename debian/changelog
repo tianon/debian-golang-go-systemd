@@ -1,0 +1,5 @@
+golang-go-systemd-dev (1-1) UNRELEASED; urgency=low
+
+  * Initial release (Closes: #NNNNN).
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Thu, 17 Apr 2014 02:07:07 +0000
