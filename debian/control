@@ -1,4 +1,4 @@
-Source: golang-go-systemd-dev
+Source: golang-go-systemd
 Section: devel
 Priority: extra
 Maintainer: Tianon Gravi <admwiggin@gmail.com>
