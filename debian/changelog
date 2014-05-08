@@ -1,5 +1,5 @@
-golang-go-systemd (1-1) UNRELEASED; urgency=medium
+golang-go-systemd (1-1) unstable; urgency=medium
 
   * Initial release (Closes: #745507).
 
- -- Tianon Gravi <admwiggin@gmail.com>  Thu, 17 Apr 2014 02:07:07 +0000
+ -- Tianon Gravi <admwiggin@gmail.com>  Thu, 08 May 2014 09:48:52 -0400
