@@ -1,3 +1,9 @@
+golang-go-systemd (2-1) UNRELEASED; urgency=medium
+
+  * Updated to v2 upstream release.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 21 May 2014 16:54:31 -0600
+
 golang-go-systemd (1-1) unstable; urgency=medium
 
   * Initial release (Closes: #745507).
