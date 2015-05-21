@@ -12,29 +12,39 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package unit
 
 import (
-	"io"
-	"net/http"
-
-	"github.com/coreos/go-systemd/activation"
+	"fmt"
 )
 
-func HelloServer(w http.ResponseWriter, req *http.Request) {
-	io.WriteString(w, "hello socket activated world!\n")
+type UnitOption struct {
+	Section string
+	Name    string
+	Value   string
 }
 
-func main() {
-	listeners, err := activation.Listeners(true)
-	if err != nil {
-		panic(err)
+func (uo *UnitOption) String() string {
+	return fmt.Sprintf("{Section: %q, Name: %q, Value: %q}", uo.Section, uo.Name, uo.Value)
+}
+
+func (uo *UnitOption) Match(other *UnitOption) bool {
+	return uo.Section == other.Section &&
+		uo.Name == other.Name &&
+		uo.Value == other.Value
+}
+
+func AllMatch(u1 []*UnitOption, u2 []*UnitOption) bool {
+	length := len(u1)
+	if length != len(u2) {
+		return false
 	}
 
-	if len(listeners) != 1 {
-		panic("Unexpected number of socket activation fds")
+	for i := 0; i < length; i++ {
+		if !u1[i].Match(u2[i]) {
+			return false
+		}
 	}
 
-	http.HandleFunc("/", HelloServer)
-	http.Serve(listeners[0], nil)
+	return true
 }
