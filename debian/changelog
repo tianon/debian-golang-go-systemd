@@ -1,3 +1,9 @@
+golang-go-systemd (2~git20150505-1) unstable; urgency=medium
+
+  * Updated to latest git master.
+
+ -- Tim Potter <tpot@hp.com>  Thu, 21 May 2015 11:25:45 +1000
+
 golang-go-systemd (2-1) unstable; urgency=medium
 
   * Updated to v2 upstream release.
