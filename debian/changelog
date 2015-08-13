@@ -1,8 +1,14 @@
-golang-go-systemd (3-1) UNRELEASED; urgency=medium
+golang-github-coreos-go-systemd (3-1) unstable; urgency=medium
 
+  * Team upload.
+
+  [Tianon Gravi]
   * Updated to v3 upstream release.
 
- -- Tianon Gravi <admwiggin@gmail.com>  Tue, 30 Jun 2015 20:57:57 +0000
+  [Tim Potter]
+  * Renamed to comply with new naming scheme.
+
+ -- Tim Potter <tpot@hp.com>  Thu, 13 Aug 2015 15:41:47 +1000
 
 golang-go-systemd (2~git20150505-1) unstable; urgency=medium
 
