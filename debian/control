@@ -12,6 +12,9 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-go/packages/golang-github-c
 Package: golang-github-coreos-go-systemd-dev
 Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: golang-go-systemd-dev
+Provides: golang-go-systemd-dev
+Replaces: golang-go-systemd-dev
 Built-Using: ${misc:Built-Using}
 Description: Go client bindings for systemd socket activation, journal and dbus
  Package "go-systemd" is a library that implements native Go client bindings
