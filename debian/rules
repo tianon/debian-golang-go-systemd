@@ -1,14 +1,7 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-export DH_GOPKG := github.com/coreos/go-systemd
-
-override_dh_auto_configure:
-	# the examples don't compile/test properly, so we purge them
-	[ ! -d examples ] || rm -rf examples
-	dh_auto_configure -O--buildsystem=golang
+# the examples don't compile/test properly, so we have to skip them
+export DH_GOLANG_EXCLUDES := github.com/coreos/go-systemd/examples
 
 # TODO figure out what's wrong with the tests and fix it
 override_dh_auto_test:

@@ -1,17 +1,18 @@
 Source: golang-github-coreos-go-systemd
 Section: devel
 Priority: extra
-Maintainer: Tianon Gravi <admwiggin@gmail.com>
-Uploaders: Docker Packaging Team <docker-maint@lists.alioth.debian.org>
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Tianon Gravi <tianon@debian.org>
 Build-Depends: dbus-x11, debhelper (>= 9), dh-golang, golang-dbus-dev, golang-go
 Standards-Version: 3.9.6
 Homepage: https://github.com/coreos/go-systemd
 Vcs-Git: git://anonscm.debian.org/pkg-go/packages/golang-github-coreos-go-systemd.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-go/packages/golang-github-coreos-go-systemd.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-coreos-go-systemd.git
+XS-Go-Import-Path: github.com/coreos/go-systemd
 
 Package: golang-github-coreos-go-systemd-dev
 Architecture: all
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, golang-dbus-dev
 Conflicts: golang-go-systemd-dev
 Provides: golang-go-systemd-dev
 Replaces: golang-go-systemd-dev
